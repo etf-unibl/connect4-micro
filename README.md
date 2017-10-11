@@ -35,4 +35,8 @@ After all components has been connected together, next step is to compile source
 
 After successfully flashing you will see [this picture](resources/images/game_after_init.jpg) on matrix display. Now you able to play game using keyboard connected to development board. Keys 1 to 7 used to put the disc in the appropriate column. After one of players get four connected discs you will see the discs turn [ON](resources/images/winners_discs_on.jpg) and [OFF](resources/images/winners_discs_off.jpg) with interval of 500 ms. This indicate that one of player wins the game. Now, by pressing D button you will start a new game.
 
+### Video
+ConnectFour - Using 8051 microcontroller: https://www.youtube.com/watch?v=fSNIBAk5ZpI&t 
+ConnectFour - Gameplay: https://www.youtube.com/watch?v=U9R8KiWb6Bg
+
 **\*** You don't need to use Easy8051v6 development board. Instead, you will need 10kHz clock oscillator, voltage source of 5 V for microcontroller and programmer kit for 8051 microcontroller familly.

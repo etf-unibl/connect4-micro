@@ -7,7 +7,7 @@ Copyright © 2017 Faculty of Electrical Engineering - www.etf.unibl.org
 This poject show how to make [connect four game](https://en.wikipedia.org/wiki/Connect_Four) using microcontroller 8051 and RGB LED dot matrix display. The document contains instructions how to build the project from ground, hardware components and software used in this project. They describe all steps needed to make hardware layer. It contains instructions how to flash code to microcontroller and play game after completing previous steps.
 
 ### Hardware
-This section show which hardware components was needed to make hardware layer for this game.
+This section show which hardware components were needed to make hardware layer for this game.
 Hardware layer contains next components:
 * AT89S8253 microcontroller
 * Easy8051 v6 development board *
@@ -19,16 +19,16 @@ Hardware layer contains next components:
 * 8 x 150R resistors
 * 8 x 50R resistors
 
-[This picture](resources/images/connect_four_scheme.jpg) show how to connect all these components together. Jumpers for port P0, P1, P2 and P3 of development board must be connected to pull up and all switches must be on which shown in [this picture](resources/images/dev_board_port_switches.jpg). If you use Easy8051 development kit you don't need 10K resistors.
+[This picture](resources/images/connect_four_scheme.jpg) show how to connect all these components together. Jumpers for port P0, P1, P2 and P3 of development board must be connected to pull up and all switches must be on which shown at [this picture](resources/images/dev_board_port_switches.jpg). If you use Easy8051 development kit you don't need 10K resistors.
 
 ### Software
-This section show which software used for this project.
+This section show which software was used for this project.
 Required software:
 * [MikroC for 8051](https://www.mikroe.com/mikroc/#8051)
 * [8051FLASH](https://www.mikroe.com/mikroc/#8051)
 * [source code](https://github.com/djn21/connectfour)
 
-Instruction for using [MikroC for 8051](http://download.mikroe.com/documents/compilers/mikroc/8051/mikroc-8051-manual-v100.pdf) and  [8051FLASH](https://download.mikroe.com/documents/programmers-debuggers/other/8051prog2/8051flash-programmer-manual-v100.pdf).
+Instructions for using [MikroC for 8051](http://download.mikroe.com/documents/compilers/mikroc/8051/mikroc-8051-manual-v100.pdf) and  [8051FLASH](https://download.mikroe.com/documents/programmers-debuggers/other/8051prog2/8051flash-programmer-manual-v100.pdf).
 
 ### User guide
 After all components has been connected together, next step is to compile source code and flash [connectfour.hex](connectfour.hex) file to microcontroller. For [flashing code to microcontroller](https://download.mikroe.com/documents/programmers-debuggers/other/8051prog2/8051flash-programmer-manual-v100.pdf) use 8051FLASH software. 

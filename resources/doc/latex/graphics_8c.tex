@@ -1,0 +1,165 @@
+\hypertarget{graphics_8c}{}\section{graphics.\+c File Reference}
+\label{graphics_8c}\index{graphics.\+c@{graphics.\+c}}
+
+
+This source file contains functions for working with graphics elements. It\textquotesingle{}s possible to set a pixel to one of the colors, draw horizontal or vertical line and clear entire display.  
+
+
+{\ttfamily \#include $<$graphics.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{graphics_8c_aa6833c17252c55d257f55b1cb16a1131}{Graphics\+\_\+\+Set\+Pixel} (unsigned char row, unsigned char column, Color color)
+\begin{DoxyCompactList}\small\item\em Sets the pixel of row and column to specified color. \end{DoxyCompactList}\item 
+void \hyperlink{graphics_8c_a4a4e5af831fc7c17849f58d64419eceb}{Graphics\+\_\+\+Vertical\+Line} (unsigned char column, unsigned char row\+Start, unsigned char row\+End, Color color)
+\begin{DoxyCompactList}\small\item\em Draws a vertical line on a given column from row\+Start to row\+End. \end{DoxyCompactList}\item 
+void \hyperlink{graphics_8c_a8395cc5aee1fb103e87f12ea0c7e1eca}{Graphics\+\_\+\+Horizontal\+Line} (unsigned char row, unsigned char column\+Start, unsigned char column\+End, Color color)
+\begin{DoxyCompactList}\small\item\em Draws a horizontal line on a given row from column\+Star to column\+End. \end{DoxyCompactList}\item 
+void \hyperlink{graphics_8c_a3bd50cb4e246014b3088f497b4f8a42d}{Graphics\+\_\+\+Clear\+Display} ()
+\begin{DoxyCompactList}\small\item\em Clears display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{graphics_8c_a259dc1c0f6f1b7fa04b6d61f315d2c1c}{g\+Matrix\+Red} \mbox{[}$\,$\mbox{]}
+\item 
+unsigned char \hyperlink{graphics_8c_ab05e32b30980eb657399d01ba52ef726}{g\+Matrix\+Green} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This source file contains functions for working with graphics elements. It\textquotesingle{}s possible to set a pixel to one of the colors, draw horizontal or vertical line and clear entire display. 
+
+\begin{DoxyAuthor}{Author}
+Dejan Djekanovic 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 Aug 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8c_a3bd50cb4e246014b3088f497b4f8a42d}\label{graphics_8c_a3bd50cb4e246014b3088f497b4f8a42d}} 
+\index{graphics.\+c@{graphics.\+c}!Graphics\+\_\+\+Clear\+Display@{Graphics\+\_\+\+Clear\+Display}}
+\index{Graphics\+\_\+\+Clear\+Display@{Graphics\+\_\+\+Clear\+Display}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{Graphics\+\_\+\+Clear\+Display()}{Graphics\_ClearDisplay()}}
+{\footnotesize\ttfamily void Graphics\+\_\+\+Clear\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears display. 
+
+The function clears display, sets video memory {\ttfamily g\+Matrix\+Red} and {\ttfamily g\+Matrix\+Green} to 0.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily g\+Matrix\+Red}, {\ttfamily g\+Matrix\+Green} 
+\end{DoxyNote}
+\mbox{\Hypertarget{graphics_8c_a8395cc5aee1fb103e87f12ea0c7e1eca}\label{graphics_8c_a8395cc5aee1fb103e87f12ea0c7e1eca}} 
+\index{graphics.\+c@{graphics.\+c}!Graphics\+\_\+\+Horizontal\+Line@{Graphics\+\_\+\+Horizontal\+Line}}
+\index{Graphics\+\_\+\+Horizontal\+Line@{Graphics\+\_\+\+Horizontal\+Line}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{Graphics\+\_\+\+Horizontal\+Line()}{Graphics\_HorizontalLine()}}
+{\footnotesize\ttfamily void Graphics\+\_\+\+Horizontal\+Line (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{column\+Start,  }\item[{unsigned char}]{column\+End,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a horizontal line on a given row from column\+Star to column\+End. 
+
+The function draws a horizontal line on a given {\ttfamily row} from {\ttfamily column\+Start} to {\ttfamily column\+End}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Line row \\
+\hline
+{\em column\+Start} & Line start column \\
+\hline
+{\em column\+End} & Line end column \\
+\hline
+{\em color} & Line color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Parameters {\ttfamily row}, {\ttfamily column\+Start} and {\ttfamily column\+End} must be between 0 and 7, and {\ttfamily column\+Start} must be less then {\ttfamily column\+End} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{graphics_8c_aa6833c17252c55d257f55b1cb16a1131}\label{graphics_8c_aa6833c17252c55d257f55b1cb16a1131}} 
+\index{graphics.\+c@{graphics.\+c}!Graphics\+\_\+\+Set\+Pixel@{Graphics\+\_\+\+Set\+Pixel}}
+\index{Graphics\+\_\+\+Set\+Pixel@{Graphics\+\_\+\+Set\+Pixel}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{Graphics\+\_\+\+Set\+Pixel()}{Graphics\_SetPixel()}}
+{\footnotesize\ttfamily void Graphics\+\_\+\+Set\+Pixel (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{column,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the pixel of row and column to specified color. 
+
+The function sets video memory depends on {\ttfamily row}, {\ttfamily column} and {\ttfamily color} values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Disc row \\
+\hline
+{\em column} & Disc column \\
+\hline
+{\em color} & Disc color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily g\+Matrix\+Red}, {\ttfamily g\+Matrix\+Green} 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Parameters {\ttfamily row} and {\ttfamily column} must be between 0 and 7 
+\end{DoxyWarning}
+\mbox{\Hypertarget{graphics_8c_a4a4e5af831fc7c17849f58d64419eceb}\label{graphics_8c_a4a4e5af831fc7c17849f58d64419eceb}} 
+\index{graphics.\+c@{graphics.\+c}!Graphics\+\_\+\+Vertical\+Line@{Graphics\+\_\+\+Vertical\+Line}}
+\index{Graphics\+\_\+\+Vertical\+Line@{Graphics\+\_\+\+Vertical\+Line}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{Graphics\+\_\+\+Vertical\+Line()}{Graphics\_VerticalLine()}}
+{\footnotesize\ttfamily void Graphics\+\_\+\+Vertical\+Line (\begin{DoxyParamCaption}\item[{unsigned char}]{column,  }\item[{unsigned char}]{row\+Start,  }\item[{unsigned char}]{row\+End,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a vertical line on a given column from row\+Start to row\+End. 
+
+The function draws a vertical line on a given {\ttfamily column} from {\ttfamily row\+Start} to {\ttfamily row\+End}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & Line column \\
+\hline
+{\em row\+Start} & Line start row \\
+\hline
+{\em row\+End} & Line end row \\
+\hline
+{\em color} & Line color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Parameters {\ttfamily column}, {\ttfamily row\+Start} and {\ttfamily row\+End} must be between 0 and 7, and {\ttfamily row\+Start} must be less then {\ttfamily row\+End} 
+\end{DoxyWarning}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{graphics_8c_ab05e32b30980eb657399d01ba52ef726}\label{graphics_8c_ab05e32b30980eb657399d01ba52ef726}} 
+\index{graphics.\+c@{graphics.\+c}!g\+Matrix\+Green@{g\+Matrix\+Green}}
+\index{g\+Matrix\+Green@{g\+Matrix\+Green}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{g\+Matrix\+Green}{gMatrixGreen}}
+{\footnotesize\ttfamily unsigned char g\+Matrix\+Green\mbox{[}$\,$\mbox{]}}
+
+Video memory for green color. \mbox{\Hypertarget{graphics_8c_a259dc1c0f6f1b7fa04b6d61f315d2c1c}\label{graphics_8c_a259dc1c0f6f1b7fa04b6d61f315d2c1c}} 
+\index{graphics.\+c@{graphics.\+c}!g\+Matrix\+Red@{g\+Matrix\+Red}}
+\index{g\+Matrix\+Red@{g\+Matrix\+Red}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{g\+Matrix\+Red}{gMatrixRed}}
+{\footnotesize\ttfamily unsigned char g\+Matrix\+Red\mbox{[}$\,$\mbox{]}}
+
+Video memory for red color. 

@@ -1,0 +1,162 @@
+\hypertarget{connectfour_8c}{}\section{connectfour.\+c File Reference}
+\label{connectfour_8c}\index{connectfour.\+c@{connectfour.\+c}}
+
+
+This source file contains functions for abstracting connectfour game. It\textquotesingle{}s possible to initialize connect four game, insert disc in appropriate column, switch between red and green player, check if one of players wins the game, turn on or off winners discs and start new game.  
+
+
+{\ttfamily \#include $<$connectfour.\+h$>$}\newline
+{\ttfamily \#include $<$graphics.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{connectfour_8c_adb564386ba6fae8eccd700ae65657c42}{Connect\+Four\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes connectfour. \end{DoxyCompactList}\item 
+void \hyperlink{connectfour_8c_a177cb3c91d8be94cc25768c7a6d9a791}{Connect\+Four\+\_\+\+Switch\+Player} ()
+\begin{DoxyCompactList}\small\item\em Switches between red and green player. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{connectfour_8c_a059f228f7815c4e2cecac1dc384a95f6}{Connect\+Four\+\_\+\+Insert\+Disc} (unsigned char column)
+\begin{DoxyCompactList}\small\item\em Inserts disc into the appropriate column. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{connectfour_8c_a3b85164b68d6781b913a36f2bbd47bf0}{Connect\+Four\+\_\+\+Check\+Winner} ()
+\begin{DoxyCompactList}\small\item\em Checks for winner. \end{DoxyCompactList}\item 
+void \hyperlink{connectfour_8c_af35907a0db46569548fc7dfbbda8c899}{Connect\+Four\+\_\+\+Turn\+Winners\+Discs} (unsigned char on\+Off)
+\begin{DoxyCompactList}\small\item\em Turns ON or O\+FF winners discs. \end{DoxyCompactList}\item 
+void \hyperlink{connectfour_8c_abb5186f98bc92939763e0eaadd37160b}{Connect\+Four\+\_\+\+New\+Game} ()
+\begin{DoxyCompactList}\small\item\em Starts new game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This source file contains functions for abstracting connectfour game. It\textquotesingle{}s possible to initialize connect four game, insert disc in appropriate column, switch between red and green player, check if one of players wins the game, turn on or off winners discs and start new game. 
+
+\begin{DoxyAuthor}{Author}
+Dejan Djekanovic 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 Aug 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{connectfour_8c_a3b85164b68d6781b913a36f2bbd47bf0}\label{connectfour_8c_a3b85164b68d6781b913a36f2bbd47bf0}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+Check\+Winner@{Connect\+Four\+\_\+\+Check\+Winner}}
+\index{Connect\+Four\+\_\+\+Check\+Winner@{Connect\+Four\+\_\+\+Check\+Winner}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+Check\+Winner()}{ConnectFour\_CheckWinner()}}
+{\footnotesize\ttfamily unsigned char Connect\+Four\+\_\+\+Check\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for winner. 
+
+The function cheks if current player has four disc connected together. The discs can be connected by x or y axis, or by both of diagonales.
+
+\begin{DoxyReturn}{Returns}
+Returns 1 if somone wins the game, or 0 otherwise 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads {\ttfamily m\+Game\+Matrix}, {\ttfamily m\+Current\+Player\+Color} and modify {\ttfamily m\+Winners\+Discs\+Position} 
+\end{DoxyNote}
+\mbox{\Hypertarget{connectfour_8c_adb564386ba6fae8eccd700ae65657c42}\label{connectfour_8c_adb564386ba6fae8eccd700ae65657c42}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+Init@{Connect\+Four\+\_\+\+Init}}
+\index{Connect\+Four\+\_\+\+Init@{Connect\+Four\+\_\+\+Init}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+Init()}{ConnectFour\_Init()}}
+{\footnotesize\ttfamily void Connect\+Four\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes connectfour. 
+
+The function sets the color of the current player and draws a horizontal line showing which player is on the move.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Current\+Player\+Color} 
+\end{DoxyNote}
+\mbox{\Hypertarget{connectfour_8c_a059f228f7815c4e2cecac1dc384a95f6}\label{connectfour_8c_a059f228f7815c4e2cecac1dc384a95f6}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+Insert\+Disc@{Connect\+Four\+\_\+\+Insert\+Disc}}
+\index{Connect\+Four\+\_\+\+Insert\+Disc@{Connect\+Four\+\_\+\+Insert\+Disc}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+Insert\+Disc()}{ConnectFour\_InsertDisc()}}
+{\footnotesize\ttfamily unsigned char Connect\+Four\+\_\+\+Insert\+Disc (\begin{DoxyParamCaption}\item[{unsigned char}]{column }\end{DoxyParamCaption})}
+
+
+
+Inserts disc into the appropriate column. 
+
+The function iserts the disc into {\ttfamily m\+Game\+Matrix}, then simulates insertion of the disc into the display. Finnaly, it checks if the disc is inserted successfully.
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & Disc column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if disc inserted successfully, 0 otherwise 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads {\ttfamily m\+Current\+Player\+Color} and modify {\ttfamily m\+Game\+Matrix}, {\ttfamily m\+Disc\+X\+Position}, {\ttfamily m\+Disc\+Y\+Position} 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Parameter {\ttfamily column} must be between 1 and 7 
+\end{DoxyWarning}
+\mbox{\Hypertarget{connectfour_8c_abb5186f98bc92939763e0eaadd37160b}\label{connectfour_8c_abb5186f98bc92939763e0eaadd37160b}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+New\+Game@{Connect\+Four\+\_\+\+New\+Game}}
+\index{Connect\+Four\+\_\+\+New\+Game@{Connect\+Four\+\_\+\+New\+Game}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+New\+Game()}{ConnectFour\_NewGame()}}
+{\footnotesize\ttfamily void Connect\+Four\+\_\+\+New\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts new game. 
+
+The function sets values of {\ttfamily m\+Game\+Matrix} and {\ttfamily m\+Winners\+Discs\+Position} to 0, clears display and initializes connecfour game.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Game\+Matrix}, {\ttfamily m\+Winners\+Discs\+Position} 
+\end{DoxyNote}
+\mbox{\Hypertarget{connectfour_8c_a177cb3c91d8be94cc25768c7a6d9a791}\label{connectfour_8c_a177cb3c91d8be94cc25768c7a6d9a791}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+Switch\+Player@{Connect\+Four\+\_\+\+Switch\+Player}}
+\index{Connect\+Four\+\_\+\+Switch\+Player@{Connect\+Four\+\_\+\+Switch\+Player}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+Switch\+Player()}{ConnectFour\_SwitchPlayer()}}
+{\footnotesize\ttfamily void Connect\+Four\+\_\+\+Switch\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Switches between red and green player. 
+
+The function checks if current player color is red or green and changes value of {\ttfamily m\+Current\+Player\+Color} to color of another player.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Current\+Player\+Color} 
+\end{DoxyNote}
+\mbox{\Hypertarget{connectfour_8c_af35907a0db46569548fc7dfbbda8c899}\label{connectfour_8c_af35907a0db46569548fc7dfbbda8c899}} 
+\index{connectfour.\+c@{connectfour.\+c}!Connect\+Four\+\_\+\+Turn\+Winners\+Discs@{Connect\+Four\+\_\+\+Turn\+Winners\+Discs}}
+\index{Connect\+Four\+\_\+\+Turn\+Winners\+Discs@{Connect\+Four\+\_\+\+Turn\+Winners\+Discs}!connectfour.\+c@{connectfour.\+c}}
+\subsubsection{\texorpdfstring{Connect\+Four\+\_\+\+Turn\+Winners\+Discs()}{ConnectFour\_TurnWinnersDiscs()}}
+{\footnotesize\ttfamily void Connect\+Four\+\_\+\+Turn\+Winners\+Discs (\begin{DoxyParamCaption}\item[{unsigned char}]{on\+Off }\end{DoxyParamCaption})}
+
+
+
+Turns ON or O\+FF winners discs. 
+
+The function turns off winners discs if {\ttfamily on\+Off} is 0, turns on otherwise.
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Off} & Set 0 to turn off discs, 1 otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads {\ttfamily m\+Current\+Player\+Color}, {\ttfamily m\+Winners\+Discs\+Position} 
+\end{DoxyNote}

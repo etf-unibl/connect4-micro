@@ -1,0 +1,41 @@
+Copyright © 2017 Faculty of Electrical Engineering -\/ www.\+etf.\+unibl.\+org
+
+\subsubsection*{Introduction}
+
+This poject show how to make \href{https://en.wikipedia.org/wiki/Connect_Four}{\tt connect four game} using microcontroller 8051 and R\+GB L\+ED dot matrix display. The document contains instructions how to build the project from ground, hardware components and software used in this project. They describe all steps needed to make hardware layer. It contains instructions how to flash code to microcontroller and play game after completing previous steps.
+
+\subsubsection*{Hardware}
+
+This section show which hardware components was needed to make hardware layer for this game. Hardware layer contains next components\+:
+\begin{DoxyItemize}
+\item A\+T89\+S8253 microcontroller
+\item Easy8051 v6 development board $\ast$
+\item R\+GB dot L\+ED matrix display
+\item 4 x 4 keyboard
+\item 2 x U\+L\+N2803A transistor array (sink type)
+\item 1 x T\+D62783\+A\+GP transistor array (source type)
+\item 24 x 10K resistors
+\item 8 x 150R resistors
+\item 8 x 50R resistors
+\end{DoxyItemize}
+
+\href{resources/images/connect_four_scheme.jpg}{\tt This picture} show how to connect all these components together. Jumpers for port P0, P1, P2 and P3 of development board must be connected to pull up and all switches must be on which shown in \href{resources/images/dev_board_port_switches.jpg}{\tt this picture}. If you use Easy8051 development kit you don\textquotesingle{}t need 10K resistors.
+
+\subsubsection*{Software}
+
+This section show which software used for this project. Required software\+:
+\begin{DoxyItemize}
+\item \href{https://www.mikroe.com/mikroc/#8051}{\tt MikroC for 8051}
+\item \href{https://www.mikroe.com/mikroc/#8051}{\tt 8051\+F\+L\+A\+SH}
+\item \href{https://github.com/djn21/connectfour}{\tt source code}
+\end{DoxyItemize}
+
+Instruction for using \href{http://download.mikroe.com/documents/compilers/mikroc/8051/mikroc-8051-manual-v100.pdf}{\tt MikroC for 8051} and \href{https://download.mikroe.com/documents/programmers-debuggers/other/8051prog2/8051flash-programmer-manual-v100.pdf}{\tt 8051\+F\+L\+A\+SH}.
+
+\subsubsection*{User guide}
+
+After all components has been connected together, next step is to compile source code and flash \href{connectfour.hex}{\tt connectfour.\+hex} file to microcontroller. For \href{https://download.mikroe.com/documents/programmers-debuggers/other/8051prog2/8051flash-programmer-manual-v100.pdf}{\tt flashing code to microcontroller} use 8051\+F\+L\+A\+SH software.
+
+After successfully flashing you will see \href{resources/images/game_after_init.jpg}{\tt this picture} on matrix display. Now you able to play game using keyboard connected to development board. Keys 1 to 7 used to put the disc in the appropriate column. After one of players get four connected discs you will see the discs turn \href{resources/images/winners_discs_on.jpg}{\tt ON} and \href{resources/images/winners_discs_off.jpg}{\tt O\+FF} with interval of 500 ms. This indicate that one of player wins the game. Now, by pressing D button you will start a new game.
+
+$\ast$$\ast$$\ast$$\ast$$\ast$ You don\textquotesingle{}t need to use Easy8051v6 development board. Instead, you will need 10k\+Hz clock oscillator, voltage source of 5 V for microcontroller and programmer kit for 8051 microcontroller familly. 

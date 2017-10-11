@@ -1,0 +1,88 @@
+\hypertarget{timer_8c}{}\section{timer.\+c File Reference}
+\label{timer_8c}\index{timer.\+c@{timer.\+c}}
+
+
+This source file contains functions for working with time. It\textquotesingle{}s possible to initialize timer, get current miliseconds and refresh timer value.  
+
+
+{\ttfamily \#include $<$timer.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8c_a7cc941ce9a1dba3638482250c4e36aa4}{Timer\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize and start timer. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{timer_8c_a38f480e0aa85171177397e4cb64cc1d1}{Timer\+\_\+\+Miliseconds} ()
+\begin{DoxyCompactList}\small\item\em Returns current miliseconds from start of timer. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ac5af36b8b36b9777c897a460134fd87c}{Timer\+\_\+\+Tick} ()
+\begin{DoxyCompactList}\small\item\em Increases current time every milisecond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This source file contains functions for working with time. It\textquotesingle{}s possible to initialize timer, get current miliseconds and refresh timer value. 
+
+\begin{DoxyAuthor}{Author}
+Dejan Djekanovic 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 Aug 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{timer_8c_a7cc941ce9a1dba3638482250c4e36aa4}\label{timer_8c_a7cc941ce9a1dba3638482250c4e36aa4}} 
+\index{timer.\+c@{timer.\+c}!Timer\+\_\+\+Init@{Timer\+\_\+\+Init}}
+\index{Timer\+\_\+\+Init@{Timer\+\_\+\+Init}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{Timer\+\_\+\+Init()}{Timer\_Init()}}
+{\footnotesize\ttfamily void Timer\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize and start timer. 
+
+The function sets current time to 0, configures and starts timer which used to refresh current time.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Miliseconds} 
+\end{DoxyNote}
+\mbox{\Hypertarget{timer_8c_a38f480e0aa85171177397e4cb64cc1d1}\label{timer_8c_a38f480e0aa85171177397e4cb64cc1d1}} 
+\index{timer.\+c@{timer.\+c}!Timer\+\_\+\+Miliseconds@{Timer\+\_\+\+Miliseconds}}
+\index{Timer\+\_\+\+Miliseconds@{Timer\+\_\+\+Miliseconds}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{Timer\+\_\+\+Miliseconds()}{Timer\_Miliseconds()}}
+{\footnotesize\ttfamily unsigned long Timer\+\_\+\+Miliseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns current miliseconds from start of timer. 
+
+The function return current miliseconds from start of timer.
+
+\begin{DoxyReturn}{Returns}
+Curent miliseconds form start of timer 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads {\ttfamily m\+Miliseconds} 
+\end{DoxyNote}
+\mbox{\Hypertarget{timer_8c_ac5af36b8b36b9777c897a460134fd87c}\label{timer_8c_ac5af36b8b36b9777c897a460134fd87c}} 
+\index{timer.\+c@{timer.\+c}!Timer\+\_\+\+Tick@{Timer\+\_\+\+Tick}}
+\index{Timer\+\_\+\+Tick@{Timer\+\_\+\+Tick}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{Timer\+\_\+\+Tick()}{Timer\_Tick()}}
+{\footnotesize\ttfamily void Timer\+\_\+\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increases current time every milisecond. 
+
+The function is interrupt routine which increases current time evry milisecond.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Miliseconds} 
+\end{DoxyNote}

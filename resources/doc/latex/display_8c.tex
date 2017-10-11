@@ -1,0 +1,120 @@
+\hypertarget{display_8c}{}\section{display.\+c File Reference}
+\label{display_8c}\index{display.\+c@{display.\+c}}
+
+
+This source file contains functions for working with display. It\textquotesingle{}s possible to initialize display, set output display ports and refresh display content.  
+
+
+{\ttfamily \#include $<$display.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{display_8c_adabfff998fae448ba101629ded565306}{Display\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes display. \end{DoxyCompactList}\item 
+void \hyperlink{display_8c_aef07d2488dd402efc57865ef8e76b56b}{Display\+\_\+\+Set\+Output} (unsigned char row, unsigned char red, unsigned char green)
+\begin{DoxyCompactList}\small\item\em Sets display rows and colors matrix. \end{DoxyCompactList}\item 
+void \hyperlink{display_8c_a322fd8304114e7d3f379c86c12856012}{Display\+\_\+\+Refresh} ()
+\begin{DoxyCompactList}\small\item\em Refreshes display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{display_8c_abab98fda7f0cf40ea680d75ecc48b77d}{g\+Matrix\+Red} \mbox{[}8\mbox{]} = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\}
+\item 
+unsigned char \hyperlink{display_8c_af294956e747cb78619f453b83d3c4b1c}{g\+Matrix\+Green} \mbox{[}8\mbox{]} = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This source file contains functions for working with display. It\textquotesingle{}s possible to initialize display, set output display ports and refresh display content. 
+
+\begin{DoxyAuthor}{Author}
+Dejan Djekanovic 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09 Aug 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{display_8c_adabfff998fae448ba101629ded565306}\label{display_8c_adabfff998fae448ba101629ded565306}} 
+\index{display.\+c@{display.\+c}!Display\+\_\+\+Init@{Display\+\_\+\+Init}}
+\index{Display\+\_\+\+Init@{Display\+\_\+\+Init}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{Display\+\_\+\+Init()}{Display\_Init()}}
+{\footnotesize\ttfamily void Display\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes display. 
+
+The function sets output ports to 0, configures and starts timer which used to refresh display.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Row\+Output\+Port}, {\ttfamily m\+Red\+Output\+Port}, {\ttfamily m\+Green\+Output\+Port} 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8c_a322fd8304114e7d3f379c86c12856012}\label{display_8c_a322fd8304114e7d3f379c86c12856012}} 
+\index{display.\+c@{display.\+c}!Display\+\_\+\+Refresh@{Display\+\_\+\+Refresh}}
+\index{Display\+\_\+\+Refresh@{Display\+\_\+\+Refresh}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{Display\+\_\+\+Refresh()}{Display\_Refresh()}}
+{\footnotesize\ttfamily void Display\+\_\+\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Refreshes display. 
+
+The function is interrupt routine which refreshes the display every 2 miliseconds.
+
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reads {\ttfamily g\+Matrix\+Row}, {\ttfamily g\+Matrix\+Red}, {\ttfamily g\+Matrix\+Green} 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8c_aef07d2488dd402efc57865ef8e76b56b}\label{display_8c_aef07d2488dd402efc57865ef8e76b56b}} 
+\index{display.\+c@{display.\+c}!Display\+\_\+\+Set\+Output@{Display\+\_\+\+Set\+Output}}
+\index{Display\+\_\+\+Set\+Output@{Display\+\_\+\+Set\+Output}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{Display\+\_\+\+Set\+Output()}{Display\_SetOutput()}}
+{\footnotesize\ttfamily void Display\+\_\+\+Set\+Output (\begin{DoxyParamCaption}\item[{unsigned char}]{row,  }\item[{unsigned char}]{red,  }\item[{unsigned char}]{green }\end{DoxyParamCaption})}
+
+
+
+Sets display rows and colors matrix. 
+
+The function turns off all ports to avoid ghosts, then sets output ports to appropriate values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Output value for row port \\
+\hline
+{\em red} & Output value for red color port \\
+\hline
+{\em green} & Output value for green color port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Modify {\ttfamily m\+Row\+Output\+Port}, {\ttfamily m\+Red\+Output\+Port}, {\ttfamily m\+Green\+Output\+Port} 
+\end{DoxyNote}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{display_8c_af294956e747cb78619f453b83d3c4b1c}\label{display_8c_af294956e747cb78619f453b83d3c4b1c}} 
+\index{display.\+c@{display.\+c}!g\+Matrix\+Green@{g\+Matrix\+Green}}
+\index{g\+Matrix\+Green@{g\+Matrix\+Green}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{g\+Matrix\+Green}{gMatrixGreen}}
+{\footnotesize\ttfamily unsigned char g\+Matrix\+Green\mbox{[}8\mbox{]} = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\}}
+
+Video memory for green color. \mbox{\Hypertarget{display_8c_abab98fda7f0cf40ea680d75ecc48b77d}\label{display_8c_abab98fda7f0cf40ea680d75ecc48b77d}} 
+\index{display.\+c@{display.\+c}!g\+Matrix\+Red@{g\+Matrix\+Red}}
+\index{g\+Matrix\+Red@{g\+Matrix\+Red}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{g\+Matrix\+Red}{gMatrixRed}}
+{\footnotesize\ttfamily unsigned char g\+Matrix\+Red\mbox{[}8\mbox{]} = \{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\}}
+
+Video memory for red color. 

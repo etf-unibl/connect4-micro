@@ -1,0 +1,29 @@
+main
+	Init
+		Timer_Init
+		Keypad_Init
+		Display_Init
+		ConnectFour_Init
+			Graphics_HorizontalLine
+				Graphics_SetPixel
+	Keypad_Key_Click
+		Keypad_Key_Press
+			Delay_1us
+		Delay_10us
+	ConnectFour_NewGame
+		Graphics_ClearDisplay
+		ConnectFour_Init
+			Graphics_HorizontalLine
+				Graphics_SetPixel
+	ConnectFour_InsertDisc
+		Graphics_SetPixel
+	ConnectFour_CheckWinner
+	Timer_Miliseconds
+	ConnectFour_TurnWinnersDiscs
+		Graphics_SetPixel
+	ConnectFour_SwitchPlayer
+		Graphics_HorizontalLine
+			Graphics_SetPixel
+Timer_Tick
+Display_Refresh
+	Display_SetOutput
